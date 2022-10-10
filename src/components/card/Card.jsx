@@ -1,12 +1,13 @@
 import React from "react";
 import Buton from "../button/Buton";
-import "./Card.css";
+import cardStyle from "./card.module.css";
 
-const Card = () => {
+const Card = ({ img, dil, btnName }) => {
   return (
     <div>
-      Card
-      <Buton />
+      <h1 className={cardStyle["title"]}>{dil}</h1>
+      <img className={cardStyle["images"]} src={img} alt="" />
+      <Buton btnName={btnName} />
     </div>
   );
 };
